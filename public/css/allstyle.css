@@ -1,0 +1,229 @@
+ 
+  /* -----home----------- */
+         .hover-btn a {
+             color: #fff;
+             font-size: 22px;
+             cursor: pointer;
+             display: block;
+         }
+
+         .hover-body:hover .hover-btn {
+             background: rgb(0, 0, 0);
+             background: rgba(0, 0, 0, 0.2);
+             width: 100%;
+             transition: .5s ease;
+         }
+
+         .hover-body:hover .hover-btn a {
+             color: #fff;
+         }
+
+         .category_image img {
+             box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+         }
+
+         .category_image img:hover {
+             transition: 1 ease;
+             -webkit-transform: scaleX(-1);
+             transform: scaleX(-1);
+             box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+         }
+
+         .index_category table,
+         th,
+         td {
+             border: 1px solid rgb(36, 20, 20);
+             border-collapse: collapse;
+             padding: 0;
+         }
+
+         .enable-animation {
+             animation: marquee linear infinite;
+             animation-duration: var(--marquee-duration);
+         }
+
+
+            @-webkit-keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(calc(-250px * 7));
+                }
+            }
+
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(calc(-250px * 7));
+                }
+            }
+
+            .slider {
+                background: rgb(110, 60, 51);
+                border-bottom:1px solid black;
+                border-top:1px solid black;
+                box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+                height: 40px;
+                line-height: 40px;
+                margin: auto;
+                overflow: hidden;
+                position: relative;
+                width:100%;
+            }
+
+            .slider::before,
+            .slider::after {
+                background: linear-gradient(to right, rgb(139, 87, 87) 1%, rgba(255, 255, 255, 0) 100%);
+                content: "";
+                height: 40px;          
+                position: absolute;
+                width: 60px;
+                z-index: 2;
+            }
+
+            .slider::after {
+                right: 0;
+                top: 0;
+                transform: rotateZ(180deg);
+            }
+
+            .slider::before {
+                left: 0;
+                top: 0;
+            }
+
+            .slider .slide-track {
+                -webkit-animation: scroll 40s linear infinite;
+                animation: scroll 40s linear infinite;
+                display: flex;
+                width: calc(250px * 14);
+            }
+
+            .slider .slide {
+                height: 40px;
+                width: 250px;
+            }
+
+              .slide-track:hover {
+            animation-play-state: paused;
+        }
+        /* -----end home----------- */  
+ /* -----------------product page css start------------------ */
+ .color-body {
+            width: 26px;
+            height: 26px;
+            line-height: 15px;
+            padding: 1px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .color-body:hover {
+            border: 2px solid rgb(99, 99, 5);
+        }
+
+        .color-body img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+
+         .filter-btn {
+            background-color: #fff;
+        }
+
+        .filter-btn:hover {
+            background-color: rgb(110, 60, 51);
+            color: #fff;
+            transition: .9s ease;
+        }
+
+         /* Custom accordion style */
+        .accordion-button {
+            padding: 0px;
+            font-weight: bold;
+            border: 0;
+            font-size: 18px;
+            color: #333333;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+            border: none;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: none;
+            color: rgb(110, 60, 51);
+        }
+
+        .accordion-button::after {
+            width: auto;
+            height: auto;
+            content: "+";
+            font-size: 40px;
+            background-image: none;
+            font-weight: 100;
+            color: rgb(110, 60, 51);
+            transform: translateY(-4px);
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            width: auto;
+            height: auto;
+            background-image: none;
+            content: "-";
+            font-size: 48px;
+            transform: translate(-5px, -4px);
+            transform: rotate(0deg);
+        }
+
+
+
+        .product-wrapper:hover {
+            transition: .9s ease;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.15);
+        }
+
+        /* -----------------single page css start------------------ */
+          /* ------------review css------- */
+        .rating {
+            padding-bottom: 30px;
+        }
+
+        .rating label {
+            float: right;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .rating label:not(:first-of-type) {
+            padding-right: 2px;
+        }
+
+        .rating label:before {
+            content: "\2605";
+            font-size: 42px;
+            color: #ccc;
+            line-height: 1;
+        }
+
+        .rating input {
+            display: none;
+        }
+
+        .rating input:checked~label:before,
+        .rating:not(:checked)>label:hover:before,
+        .rating:not(:checked)>label:hover~label:before {
+            color: rgb(110, 60, 51);
+        }
